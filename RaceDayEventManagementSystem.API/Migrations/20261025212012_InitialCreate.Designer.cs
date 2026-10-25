@@ -12,7 +12,7 @@ using RaceDayEventManagementSystem.API.Data;
 namespace RaceDayEventManagementSystem.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20261025205121_InitialCreate")]
+    [Migration("20261025212012_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -31,8 +31,9 @@ namespace RaceDayEventManagementSystem.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("categoryDistance")
-                        .HasColumnType("int");
+                    b.Property<decimal?>("categoryDistance")
+                        .HasPrecision(5, 2)
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<int>("categoryEntryFee")
                         .HasColumnType("int");
@@ -199,8 +200,9 @@ namespace RaceDayEventManagementSystem.API.Migrations
                     b.Property<int?>("position")
                         .HasColumnType("int");
 
-                    b.Property<int?>("resultAverageSpeed")
-                        .HasColumnType("int");
+                    b.Property<decimal?>("resultAverageSpeed")
+                        .HasPrecision(5, 2)
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<string>("resultStatus")
                         .HasColumnType("nvarchar(max)");

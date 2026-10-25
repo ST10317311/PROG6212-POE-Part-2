@@ -17,7 +17,7 @@ namespace RaceDayEventManagementSystem.API.Migrations
                 {
                     categoryID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     categoryName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    categoryDistance = table.Column<int>(type: "int", nullable: true),
+                    categoryDistance = table.Column<decimal>(type: "decimal(5,2)", precision: 5, scale: 2, nullable: true),
                     categoryEntryFee = table.Column<int>(type: "int", nullable: false),
                     categoryMaxParticipants = table.Column<int>(type: "int", nullable: false)
                 },
@@ -114,7 +114,7 @@ namespace RaceDayEventManagementSystem.API.Migrations
                     startTime = table.Column<TimeOnly>(type: "time", nullable: true),
                     endTime = table.Column<TimeOnly>(type: "time", nullable: true),
                     position = table.Column<int>(type: "int", nullable: true),
-                    resultAverageSpeed = table.Column<int>(type: "int", nullable: true),
+                    resultAverageSpeed = table.Column<decimal>(type: "decimal(5,2)", precision: 5, scale: 2, nullable: true),
                     resultStatus = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>

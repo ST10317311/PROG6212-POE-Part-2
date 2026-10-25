@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace RaceDayEventManagementSystem.API.Models
 {
@@ -7,7 +8,9 @@ namespace RaceDayEventManagementSystem.API.Models
         [Key]
         public Guid categoryID { get; set; }
         public string? categoryName { get; set; } = null;
-        public int? categoryDistance { get; set; } = null;
+
+        [Precision(5,2)]
+        public decimal? categoryDistance { get; set; } = null;
         
         public int categoryEntryFee { get; set; } = 0;
 

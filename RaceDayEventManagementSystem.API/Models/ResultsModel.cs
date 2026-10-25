@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace RaceDayEventManagementSystem.API.Models
 {
@@ -15,7 +16,8 @@ namespace RaceDayEventManagementSystem.API.Models
 
         public int? position { get; set; } = null;
 
-        public int? resultAverageSpeed { get; set; } = null;
+        [Precision(5,2)]
+        public decimal? resultAverageSpeed { get; set; } = null;
 
         public string? resultStatus { get; set; } = null;
     }
