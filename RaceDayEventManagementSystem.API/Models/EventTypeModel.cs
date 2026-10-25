@@ -1,7 +1,10 @@
-﻿namespace RaceDayEventManagementSystem.API.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RaceDayEventManagementSystem.API.Models
 {
     public class EventTypeModel
     {
+        [Key]
         public Guid eventTypeID { get; set; }
         public string? eventTypeName { get; set; } = null;
         public string? eventTypeDescription { get; set; } = null;

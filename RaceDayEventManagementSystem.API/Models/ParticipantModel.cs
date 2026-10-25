@@ -1,7 +1,10 @@
-﻿namespace RaceDayEventManagementSystem.API.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RaceDayEventManagementSystem.API.Models
 {
     public class ParticipantModel
     {
+        [Key]
         public Guid participantID { get; set; }
 
         public required string participantName { get; set; }

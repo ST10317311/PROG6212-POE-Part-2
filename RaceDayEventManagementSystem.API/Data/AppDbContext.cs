@@ -5,9 +5,8 @@ namespace RaceDayEventManagementSystem.API.Data
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) 
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-            
         }
 
         public DbSet<CategoryModel> Categories { get; set; }
@@ -23,6 +22,5 @@ namespace RaceDayEventManagementSystem.API.Data
         public DbSet<ParticipantModel> Participants { get; set; }
 
         public DbSet<ResultsModel> Results { get; set; }
-
     }
 }
