@@ -9,18 +9,18 @@ namespace RaceDayEventManagementSystem.API.Data
         {
         }
 
-        public DbSet<CategoryModel> Categories { get; set; }
+        public DbSet<CategoryModel> CategoryModel { get; set; }
 
-        public DbSet<EntryModel> Entries { get; set; }
+        public DbSet<EntryModel> EntryModel { get; set; }
 
-        public DbSet<EventModel> Events { get; set; }
+        public DbSet<EventModel> EventModel { get; set; }
 
-        public DbSet<EventTypeModel> EventTypes { get; set; }
+        public DbSet<EventTypeModel> EventTypeModel { get; set; }
 
-        public DbSet<OrganiserModel> Organisers { get; set; }
+        public DbSet<OrganiserModel> OrganiserModel { get; set; }
 
-        public DbSet<ParticipantModel> Participants { get; set; }
+        public DbSet<ParticipantModel> ParticipantsModel { get; set; }
 
-        public DbSet<ResultsModel> Results { get; set; }
+        public DbSet<ResultsModel> ResultsModel { get; set; }
     }
 }
